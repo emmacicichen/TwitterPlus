@@ -12,11 +12,11 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  # 注意：
-  # 如果在线下载过慢，请将17-20行内容改为如下并去掉26行内容的注释：
+  # Note：
+  # if offline download too slow，change line 17-20 to below and delete comments in line 26：
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  # config.vm.box_url = "你自己的box所在路径"
+  # config.vm.box_url = "your own box path"
   config.vm.box = "hashicorp/bionic64"
 
   # Disable automatic box update checking. If you disable this, then

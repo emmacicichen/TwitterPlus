@@ -21,6 +21,7 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = UserSerializer
     permission_classes = (permissions.IsAuthenticated,)
 
+
     class AccountViewSet(viewsets.ViewSet):
         permission_classes = (AllowAny,)
         serializer_class = SignupSerializer
@@ -86,7 +87,7 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
             return Response({
                 'success': True,
                 'user': UserSerializer(user).data,
-            })
+            }, status=201)
 
         @action(methods=['GET'], detail=False)
         def login_status(self, request):
